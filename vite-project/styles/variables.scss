@@ -1,0 +1,31 @@
+// bg
+$primary-bg: rgb(53, 120, 163);
+$secondary-bg: rgb(186, 210, 238);
+
+//color
+$primary-color: rgb(250, 250, 250);
+
+// Weights
+$hairline-weight: 100;
+$thin-weight: 200;
+$light-weight: 300;
+$normal-weight: 400;
+$medium-weight: 500;
+$semibold-weight: 600;
+$bold-weight: 700;
+$xbold-weight: 800;
+$black-weight: 900;
+
+@font-face {
+  font-family: "DidactGothic-Regular";
+  font-weight: $normal-weight;
+  font-style: normal;
+  src: url(../public/fonts/DidactGothic-Regular.ttf);
+}
+
+// font-size
+$font-size-xl: 70px;
+$font-size-l: 45px;
+$font-size-m: 20px;
+$font-size-s: 16px;
+$font-size-xs: 12px;

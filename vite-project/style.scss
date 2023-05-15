@@ -1,0 +1,212 @@
+@import "./styles/mixings.scss";
+@import "./styles/variables.scss";
+@import "./styles/media.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#app {
+  font-family: "DidactGothic-Regular";
+  background: $secondary-bg;
+  overflow: hidden;
+}
+
+.header {
+  @include phone {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include d-flex(space-between, center);
+  padding: 30px;
+  background: $primary-bg;
+
+  .logo-wrapper {
+    padding: 10px;
+
+    .logo {
+      @include img-size(75px, 240px);
+      @include tablet {
+        @include img-size(50px, 180px);
+      }
+    }
+  }
+
+  .input-wrapper {
+    align-items: center;
+
+    .input {
+      @include phone {
+        margin: 30px;
+      }
+
+      @include tablet {
+        width: 130px;
+      }
+      background: inherit;
+      width: 300px;
+      border: none;
+      border-bottom: solid 2px;
+    }
+  }
+  .nav {
+    @include phone {
+      flex-direction: column;
+    }
+    @include d-flex(space-between, center);
+    width: 516px;
+
+    &-link {
+      @include tablet {
+        margin-top: 30px;
+      }
+      font-weight: $semibold-weight;
+      font-size: $font-size-m;
+    }
+  }
+}
+.main {
+  margin-top: 20px;
+  &-title {
+    @include title(center, $font-size-l);
+    font-weight: $bold-weight;
+  }
+  &-info {
+    @include phone {
+      flex-direction: column;
+    }
+    @include d-flex(flex-start, center);
+    padding: 20px;
+    &-container {
+      @include d-flex(flex-start, center);
+      flex-direction: column;
+      &-title {
+        @include title(center, $font-size-m);
+        font-weight: $bold-weight;
+      }
+      &-image-wrapper {
+        margin: 16px;
+        .main-img {
+          @include img-size(150px, 150px);
+        }
+      }
+    }
+
+    &-description {
+      padding: 10px;
+      .main-text {
+        padding: 7px;
+        margin-top: 7px;
+      }
+    }
+  }
+
+  &-btn-wrapper {
+    text-align: center;
+    .main-button {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 16px;
+      font-family: "Trebuchet MS";
+      @include button-bg(black);
+    }
+  }
+}
+
+.banner {
+  margin-top: 70px;
+  &-wrapper {
+    .banner-img {
+      @include phone {
+        height: 400px;
+      }
+
+      @include tablet {
+        height: 550px;
+      }
+      width: 100%;
+      height: 900px;
+    }
+  }
+}
+
+.blog {
+  margin-top: 70px;
+  &-title {
+    @include title(center, $font-size-l);
+    font-weight: $bold-weight;
+  }
+  &-description {
+    padding: 10px;
+  }
+
+  &-text {
+    padding: 7px;
+    margin-top: 7px;
+  }
+}
+
+.footer {
+  @include d-flex(space-between, center);
+  @include phone {
+    flex-direction: column;
+  }
+  @include tablet {
+    @include d-flex(start, center);
+  }
+  padding: 30px;
+  background: $primary-bg;
+  &-container {
+    @include tablet {
+      width: 40%;
+    }
+    &-wrapper {
+      text-align: center;
+      padding: 10px;
+      @include tablet {
+        display: flex;
+        align-items: start;
+      }
+      &-logo {
+        @include img-size(75px, 240px);
+      }
+    }
+    &-nav {
+      @include tablet {
+        flex-direction: column;
+        align-items: start;
+      }
+      @include d-flex(space-between, center);
+      flex-direction: column;
+      width: 516px;
+      &-link {
+        font-weight: $semibold-weight;
+        font-size: $font-size-m;
+        padding: 1rem;
+      }
+    }
+  }
+  &-spotify {
+    @include phone {
+      width: 100%;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,26 @@
+@mixin d-flex($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin img-size($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin title($ta, $fs) {
+  text-align: $ta;
+  font-size: $fs;
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
